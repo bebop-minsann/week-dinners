@@ -316,35 +316,108 @@ body {
 }
 
 @media print {
+    @page {
+        size: A4 landscape;
+        margin: 10mm;
+    }
     .background-elements { display: none !important; }
     body { 
         background: white !important; 
         color: black !important;
         padding: 0;
     }
-    .hero p, .footer p { color: #555; }
-    .hero-icon { box-shadow: none; }
-    .hero h1 { -webkit-text-fill-color: black; background: none; }
+    .hero {
+        margin-bottom: 1rem !important;
+        padding-top: 0 !important;
+    }
+    .hero-icon {
+        width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 10px !important;
+        box-shadow: none !important;
+    }
+    .hero-icon i {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    .hero h1 { 
+        -webkit-text-fill-color: black !important; 
+        background: none !important; 
+        font-size: 2rem !important;
+        margin-bottom: 0 !important;
+    }
+    .hero p, .footer p { 
+        color: #555 !important; 
+        font-size: 1rem !important;
+    }
+    
+    .schedule-grid {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 15px !important;
+        padding-bottom: 0 !important;
+    }
+
     .card { 
         background: white !important; 
         border: 2px solid #eaeaea !important; 
         break-inside: avoid;
         box-shadow: none !important;
         color: black !important;
-        margin-bottom: 1rem;
+        margin-bottom: 0 !important;
+        padding: 1.2rem !important;
         opacity: 1 !important;
         animation: none !important;
+        gap: 1rem !important;
     }
     .card * {
         color: black !important;
     }
-    .card-header h2 { color: black !important; }
-    .meal-content { color: #333 !important; }
-    .print-btn { display: none !important; }
+    .card-header {
+        padding-bottom: 0.8rem !important;
+    }
+    .card-header h2 { 
+        color: black !important; 
+        font-size: 1.4rem !important;
+    }
+    
+    .day-initial { 
+        border: 1px solid #ccc !important; 
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 1rem !important;
+        color: black !important;
+    }
+
+    .meal-section {
+        gap: 0.3rem !important;
+    }
+    
+    .meal-title {
+        font-size: 0.75rem !important;
+    }
+
+    .meal-title i {
+        width: 14px !important;
+        height: 14px !important;
+    }
     
     .snack-title { color: #d97706 !important; }
     .lunch-title { color: #059669 !important; }
     .dinner-title { color: #e11d48 !important; }
+
+    .meal-content { 
+        color: #333 !important; 
+        font-size: 0.9rem !important;
+        padding-left: 22px !important;
+        line-height: 1.4 !important;
+    }
+
+    .print-btn { display: none !important; }
     
-    .day-initial { border: 1px solid #ccc; }
+    .footer {
+        padding: 1rem 0 !important;
+        gap: 0.5rem !important;
+    }
 }
