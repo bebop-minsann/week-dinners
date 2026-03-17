@@ -1,0 +1,34 @@
+{
+    "weekdays": [
+        {
+            "day": "Monday",
+            "snack": "peanutbutter knäcke, fruit",
+            "lunch": "avocado sandwich, nuts, dried fruit",
+            "dinner": "Italian"
+        },
+        {
+            "day": "Tuesday",
+            "snack": "Rice cake, fruit",
+            "lunch": "Eggs & cheese sandwich, cucumber",
+            "dinner": "Pita or tortillas"
+        },
+        {
+            "day": "Wednesday",
+            "snack": "Muesli bar, fruit",
+            "lunch": "wrap + meat (gyros), tomato",
+            "dinner": "Curry or Thai or Indian"
+        },
+        {
+            "day": "Thursday",
+            "snack": "Pancake or waffle, fruit",
+            "lunch": "Dumplings and sauce, yoghurt pot with fruit",
+            "dinner": "Asian"
+        },
+        {
+            "day": "Friday",
+            "snack": "Smoothie",
+            "lunch": "Avocado sandwich, nuts, dried fruit",
+            "dinner": "Fish & chips or pizza or burger"
+        }
+    ]
+}

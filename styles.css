@@ -1,0 +1,350 @@
+:root {
+    --bg-color: #0b0f19;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-bg: rgba(30, 41, 59, 0.4);
+    --card-border: rgba(255, 255, 255, 0.08);
+    
+    /* Vibrant gradients for meshes */
+    --accent-1: #3b82f6; /* Blue */
+    --accent-2: #8b5cf6; /* Purple */
+    --accent-3: #ec4899; /* Pink */
+    --accent-4: #06b6d4; /* Cyan */
+    
+    /* Semantic Colors for Meals */
+    --snack-color: #f59e0b; /* Amber */
+    --lunch-color: #10b981; /* Emerald */
+    --dinner-color: #f43f5e; /* Rose */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    padding: 2rem;
+    line-height: 1.5;
+}
+
+/* --- Animated Background Mesh --- */
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1e1b4b 0%, var(--bg-color) 100%);
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.5;
+    animation: float 25s infinite alternate ease-in-out;
+}
+
+.shape-1 { left: -10%; top: -10%; width: 50vw; height: 50vw; background: var(--accent-1); }
+.shape-2 { right: -20%; top: 20%; width: 60vw; height: 60vw; background: var(--accent-2); animation-delay: -5s; }
+.shape-3 { left: 40%; bottom: -30%; width: 50vw; height: 50vw; background: var(--accent-3); animation-delay: -10s; }
+.shape-4 { right: 20%; bottom: -20%; width: 40vw; height: 40vw; background: var(--accent-4); animation-delay: -15s; }
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(5%, -5%) scale(1.1); }
+    66% { transform: translate(-3%, 3%) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1.05); }
+}
+
+/* --- Layout --- */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Typography & Header --- */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+    animation: fadeDown 1s ease-out;
+}
+
+.hero-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-icon:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #ffffff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- Schedule Grid --- */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+/* --- Loading Indicator --- */
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.spin {
+    animation: spin 2s linear infinite;
+    color: var(--accent-2);
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* --- Cards --- */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 2rem;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideUp 0.8s forwards ease-out;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 30px rgba(139, 92, 246, 0.15);
+    border-color: rgba(255,255,255,0.2);
+    background: rgba(40, 53, 75, 0.5);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 1.2rem;
+}
+
+.card-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.day-initial {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--accent-4);
+}
+
+.card:hover .day-initial {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* --- Meal Sections --- */
+.meal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.meal-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.meal-title i {
+    width: 18px;
+    height: 18px;
+}
+
+.snack-title { color: var(--snack-color); }
+.lunch-title { color: var(--lunch-color); }
+.dinner-title { color: var(--dinner-color); }
+
+.meal-content {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+    padding-left: 30px;
+    line-height: 1.6;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.print-btn i {
+    width: 18px;
+    height: 18px;
+}
+
+/* --- Animations --- */
+@keyframes slideUp {
+    0% { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeDown {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* --- Responsive & Print --- */
+@media (max-width: 768px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    body {
+        padding: 1rem;
+    }
+}
+
+@media print {
+    .background-elements { display: none !important; }
+    body { 
+        background: white !important; 
+        color: black !important;
+        padding: 0;
+    }
+    .hero p, .footer p { color: #555; }
+    .hero-icon { box-shadow: none; }
+    .hero h1 { -webkit-text-fill-color: black; background: none; }
+    .card { 
+        background: white !important; 
+        border: 2px solid #eaeaea !important; 
+        break-inside: avoid;
+        box-shadow: none !important;
+        color: black !important;
+        margin-bottom: 1rem;
+        opacity: 1 !important;
+        animation: none !important;
+    }
+    .card * {
+        color: black !important;
+    }
+    .card-header h2 { color: black !important; }
+    .meal-content { color: #333 !important; }
+    .print-btn { display: none !important; }
+    
+    .snack-title { color: #d97706 !important; }
+    .lunch-title { color: #059669 !important; }
+    .dinner-title { color: #e11d48 !important; }
+    
+    .day-initial { border: 1px solid #ccc; }
+}

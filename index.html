@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Week Food Schedule</title>
+    <meta name="description" content="A beautiful and inspiring school week food schedule.">
+    
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Mesh Gradient Elements -->
+    <div class="background-elements">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    
+    <div class="container">
+        <header class="hero">
+            <div class="hero-icon">
+                <i data-lucide="chef-hat" width="48" height="48"></i>
+            </div>
+            <h1>Weekly Schedule</h1>
+            <p>Nourishing the week, one bite at a time.</p>
+        </header>
+
+        <main id="schedule-container" class="schedule-grid">
+            <!-- Cards will be dynamically injected via JS -->
+            <div class="loading">
+                <i data-lucide="loader-2" class="spin"></i>
+                <p>Loading your beautiful schedule...</p>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>Updated automatically from weekdays.json</p>
+            <button id="print-btn" class="print-btn">
+                <i data-lucide="printer"></i> Print Schedule
+            </button>
+        </footer>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
