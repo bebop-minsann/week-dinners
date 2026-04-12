@@ -2,33 +2,33 @@
     "weekdays": [
         {
             "day": "Monday",
-            "snack": "Peanutbutter knäcke, fruit",
-            "lunch": "Chicken, rice, vegetables",
-            "dinner": "Pølse med brød, ketchup, sennep"
+            "snack": "Knäcke med jordnötssmör, physalis",
+            "lunch": "Surdegsbolle m cream cheese, apple",
+            "dinner": "Bakpotatis med köttfärssås och tomatsallad med koriander och lime"
         },
         {
             "day": "Tuesday",
-            "snack": "Rice cake, fruit",
-            "lunch": "Tofu and sesame spread sandwich, peeled cucumber",
-            "dinner": "(Leo) Stegt laks og frisk pasta med squash, citron og hvidløg samt grøn salat"
+            "snack": "Riskakor, äpple",
+            "lunch": "???",
+            "dinner": "Korv stroganoff med ris och morot"
         },
         {
             "day": "Wednesday",
             "snack": "Muesli bar, fruit",
             "lunch": "Wrap + meat (gyros), tomato",
-            "dinner": "(Adrian) Stegt flæsk med risotto og spinat"
+            "dinner": "(Adrian) Lax med pasta"
         },
         {
             "day": "Thursday",
             "snack": "Pancake or waffle, fruit",
             "lunch": "Dumplings and sauce, yoghurt pot with fruit",
-            "dinner": "Gochujang tofu rice cakes with mushrooms"
+            "dinner": "Hokkaidosoppa + hvidløgsbrød"
         },
         {
             "day": "Friday",
             "snack": "Smoothie",
             "lunch": "Avocado sandwich, nuts, dried fruit",
-            "dinner": "Kødsovs stuffed sweet potatoes and pumpkin soup"
+            "dinner": "Falafel med rester"
         }
     ]
 }
