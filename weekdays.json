@@ -2,33 +2,33 @@
     "weekdays": [
         {
             "day": "Monday",
-            "snack": "peanutbutter knäcke, fruit",
-            "lunch": "avocado sandwich, nuts, dried fruit",
-            "dinner": "Indian leftovers"
+            "snack": "Peanutbutter knäcke, fruit",
+            "lunch": "Chicken, rice, vegetables",
+            "dinner": "Pølse med brød, ketchup, sennep"
         },
         {
             "day": "Tuesday",
             "snack": "Rice cake, fruit",
-            "lunch": "Eggs & cheese sandwich, cucumber",
-            "dinner": "Risotto or pumpkin stew"
+            "lunch": "Tofu and sesame spread sandwich, peeled cucumber",
+            "dinner": "(Leo) Stegt laks og frisk pasta med squash, citron og hvidløg samt grøn salat"
         },
         {
             "day": "Wednesday",
             "snack": "Muesli bar, fruit",
-            "lunch": "wrap + meat (gyros), tomato",
-            "dinner": "Curry or Thai or Indian"
+            "lunch": "Wrap + meat (gyros), tomato",
+            "dinner": "(Adrian) Stegt flæsk med risotto og spinat"
         },
         {
             "day": "Thursday",
             "snack": "Pancake or waffle, fruit",
             "lunch": "Dumplings and sauce, yoghurt pot with fruit",
-            "dinner": "Asian"
+            "dinner": "Gochujang tofu rice cakes with mushrooms"
         },
         {
             "day": "Friday",
             "snack": "Smoothie",
             "lunch": "Avocado sandwich, nuts, dried fruit",
-            "dinner": "Fish & chips or pizza or burger"
+            "dinner": "Kødsovs stuffed sweet potatoes and pumpkin soup"
         }
     ]
 }
