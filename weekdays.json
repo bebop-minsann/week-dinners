@@ -2,33 +2,33 @@
     "weekdays": [
         {
             "day": "Monday",
-            "snack": "Knäcke med jordnötssmör, physalis",
-            "lunch": "Surdegsbolle m cream cheese, apple",
-            "dinner": "Bakpotatis med köttfärssås och tomatsallad med koriander och lime"
+            "snack": "Peanut butter hardbread, fruit",
+            "lunch": "Avocado sandwich with tomato and cucumber",
+            "dinner": "Chicken soup with gnocchi"
         },
         {
             "day": "Tuesday",
-            "snack": "Riskakor, äpple",
-            "lunch": "???",
-            "dinner": "Korv stroganoff med ris och morot"
+            "snack": "Rice cake, fruit",
+            "lunch": "Egg and cheese sandwich",
+            "dinner": "Cauliflower soup with garlic bread"
         },
         {
             "day": "Wednesday",
             "snack": "Muesli bar, fruit",
             "lunch": "Wrap + meat, tomato",
-            "dinner": "(Adrian) Lax med pasta"
+            "dinner": "Meat balls with spaghetti"
         },
         {
             "day": "Thursday",
             "snack": "Pancake or waffle, fruit",
             "lunch": "Dumplings and sauce, yoghurt pot with fruit",
-            "dinner": "Birthday dinner: Sushi buffet"
+            "dinner": "Peanutbutter chicken (or tofu) noodle bowl"
         },
         {
             "day": "Friday",
             "snack": "Smoothie",
-            "lunch": "Avocado sandwich, nuts, dried fruit",
-            "dinner": "Hokkaido soup + garlic bread"
+            "lunch": "Chili bagel with cream cheese",
+            "dinner": "Salmon, potato and vegetables / Pumpkin and red lentil dal with chili and coconut milk"
         }
     ]
 }
