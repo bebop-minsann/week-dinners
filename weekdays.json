@@ -4,31 +4,31 @@
             "day": "Monday",
             "snack": "Peanut butter hardbread, fruit",
             "lunch": "Avocado sandwich with tomato and cucumber",
-            "dinner": "Bibimbab-bowl med krydret oksekød, spinat, agurk og æg"
+            "dinner": "Meatballs and potatoes"
         },
         {
             "day": "Tuesday",
             "snack": "Rice cake, fruit",
             "lunch": "Egg and cheese sandwich",
-            "dinner": "Stegte kødboller med krydderurter og lun pasta, majs og tomater"
+            "dinner": "Pasta and meat sauce"
         },
         {
             "day": "Wednesday",
             "snack": "Muesli bar, fruit",
             "lunch": "Wrap + meat, tomato",
-            "dinner": "BBQ-marineret kylling & zucchini (kartofler, guleod, løg, souvlaki-krydderi)"
+            "dinner": "Salmon and potatoes"
         },
         {
             "day": "Thursday",
             "snack": "Pancake or waffle, fruit",
             "lunch": "Dumplings and sauce, yoghurt pot with fruit",
-            "dinner": "(Minestrone) Korv stroganoff + ris"
+            "dinner": "Surprise"
         },
         {
             "day": "Friday",
             "snack": "Smoothie",
             "lunch": "Chili bagel with cream cheese",
-            "dinner": "Laks og kartofler"
+            "dinner": "Surprise"
         }
     ]
 }
